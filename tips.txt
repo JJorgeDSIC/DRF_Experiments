@@ -1,0 +1,44 @@
+
+To start a new app:
+
+python3 manage.py startapp app_name
+
+And then add the corresponding line in "djangorest/settings.py":
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+	...
+    'app_name', #The new app that we have created...
+]
+
+To mess around with the models and so on:
+
+python3 manage.py shell
+
+To create the admin site:
+
+python3 manage.py createsuperuser
+
+In this example:
+
+User: admin
+Pass: Password1234
+
+
+When something changes in the models:
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+To test:
+
+python3 manage.py test
+
+To run the server:
+
+python3 manage.py runserver
+
+To update DB in the app:
+
+python manage.py makemigrations api
+python manage.py migrate

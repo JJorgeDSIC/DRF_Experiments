@@ -1,0 +1,38 @@
+
+POST /get-token/ HTTP/1.1
+Host: localhost:8000
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+Postman-Token: 33f4e69a-1c90-42cc-ba7f-82584a7fb08c
+
+
+answer:
+
+{
+    "token": "336795aa0d7a6c538ce7fdd81642066ec6ae30f3"
+}
+
+
+to create a recommendation:
+
+POST /recommendation/ HTTP/1.1
+Host: localhost:8000
+Authorization: Token 336795aa0d7a6c538ce7fdd81642066ec6ae30f3
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+Postman-Token: da31d71b-0916-4e78-88c5-a490f8ce53c6
+
+title=This+is+a+test&comment=This+is+the+comment&reference=www.upv.es%0A
+
+
+answer:
+
+{
+    "id": 1,
+    "title": "This is a test",
+    "owner": "user1",
+    "comment": "This is the comment",
+    "reference": "www.upv.es",
+    "date_created": "2018-07-02T10:39:55.795737Z",
+    "date_modified": "2018-07-02T10:39:55.795775Z"
+}
